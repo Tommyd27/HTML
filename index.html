@@ -17,6 +17,10 @@
 		<p>Click the button dumbass</p>
 		<button onclick = "nameStatement()">Click me!</button>
 		<p id = "whileLoop"></p>
+
+		<p>This will randomly generate a champion (atm a number).</p>
+        <button onclick="getnumber()">Click</button>
+        <p id="Randomnumber"></p>
 		<script>
 			//alert("Donkey");
 			function numberStatement()
@@ -33,9 +37,17 @@
 			function nameStatement()
 			{
 				var names = ["Tom", "Tom but Worse", "Stewart", "Edward", "Matthew", "Zac"];
-				outputText = "Congratulations, your name is "  + names[getRandomNumber(names.length())];
-
+				outputText = "Congratulations, your name is "  + names[getRandomNumber(names.length)];
+				chosenElement = document.getElementById("whileLoop");
 				chosenElement.innerHTML = outputText;
+			}
+				
+			function getnumber() {
+
+				var number = getRandomNumber(getRandomNumber(getRandomNumber(3) * getRandomNumber(5)) + getRandomNumber(6))
+				chosenElement = document.getElementById("Randomnumber");
+				chosenElement.innerHTML = number;
+
 			}
 
 			function getRandomNumber(max)
