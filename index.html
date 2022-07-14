@@ -13,6 +13,36 @@
 		<img src = "images\really not stonks.png", alt="Really BadStonks">
 		<h1>Me after my final exam</h1>
 		<img src= "images\confused stonkers.jfif", alt = "Confused Stonkers">
+		
+		<p>Click the button dumbass</p>
+		<button onclick = "nameStatement()">Click me!</button>
+		<p id = "whileLoop"></p>
+		<script>
+			//alert("Donkey");
+			function numberStatement()
+			{
+				var outputText = "";
+				var i = 0
+				while (i < 10)
+				{
+					outputText += "<br> The number is " + i++;
+				}
+				chosenElement = document.getElementById("whileLoop");
+				chosenElement.innerHTML = outputText;
+			}
+			function nameStatement()
+			{
+				var names = ["Tom", "Tom but Worse", "Stewart", "Edward", "Matthew", "Zac"];
+				outputText = "Congratulations, your name is "  + names[getRandomNumber(names.length())];
+
+				chosenElement.innerHTML = outputText;
+			}
+
+			function getRandomNumber(max)
+			{
+				return Math.floor(Math.random() * max);
+			}
+		</script>
 	</body>
 
 </html>
